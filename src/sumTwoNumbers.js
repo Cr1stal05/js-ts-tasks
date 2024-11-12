@@ -5,5 +5,7 @@
  * @returns {number}
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  throw new Error('Not implemented');
+  let firstNumber1 = firstNumber.toString().replaceAll(' ', '');
+  let secondNumber1 = secondNumber.toString().replaceAll(' ', '');
+  return +firstNumber1 + +secondNumber1;
 };
