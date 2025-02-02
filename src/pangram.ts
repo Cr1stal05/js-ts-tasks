@@ -6,5 +6,13 @@
  * @returns {boolean}
  */
 module.exports.pangram = function (word: string | number): boolean {
-  throw new Error('Not implemented'); // delete this line and write your code
+  const str = word.toString().toLowerCase();
+
+  if (typeof word === 'number') {
+    // Check if all digits (0-9) are present
+    return [...'0123456789'].every(digit => str.includes(digit));
+  } else {
+    // Check if all lowercase letters (a-z) are present
+    return [...'abcdefghijklmnopqrstuvwxyz'].every(letter => str.includes(letter));
+  }
 };
